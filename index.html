@@ -99,6 +99,16 @@ p. ex1 {
         async function getLastUpdatedTime() {
           const username = 'FEPSFY6974100';
           const repo = 'FY6974100';
-
-
+          
+          const url = 'https://api.github.com/repos/${username}/${repo}/commits';
+          try {
+              const response = await fetch(url, {
+                    method: 'GET' ,
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                    }
+              });
+            if (!response.ok) {
+              throw new Error(' Error fetching data: ${response,stat
+            
       </script>
